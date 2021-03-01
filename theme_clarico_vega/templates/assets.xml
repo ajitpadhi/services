@@ -23,7 +23,7 @@
             <link rel="stylesheet" type="text/css" href="/theme_clarico_vega/static/src/scss/jquery.mCustomScrollbar.css" />
 
             <!-- AOS animations -->
-            <link rel="stylesheet" href="/theme_clarico_vega/static/lib/aos/aos.css" />
+            <link rel="stylesheet" href="/theme_clarico_vega/static/libs/aos/aos.css" />
 
         </xpath>
         <xpath expr="script[last()]" position="after">
@@ -31,7 +31,7 @@
             <script type="text/javascript" src="/theme_clarico_vega/static/src/js/frontend/theme_script.js"/>
             <script type="text/javascript" src="/theme_clarico_vega/static/src/js/frontend/multi_item_carousel.js"/>
             <script type="text/javascript" src="/theme_clarico_vega/static/src/js/frontend/offer_snippent_frontend.js"/>
-            <script type="text/javascript" src="/web/static/lib/jquery.touchSwipe/jquery.touchSwipe.js"/>
+            <script type="text/javascript" src="/web/static/libs/jquery.touchSwipe/jquery.touchSwipe.js"/>
             <script type="text/javascript" src="/theme_clarico_vega/static/src/js/frontend/plugins.js"/>
             <script type="text/javascript" src="/theme_clarico_vega/static/src/js/frontend/snippet_video_popup.js"/>
             <!-- Add scripts by ept_1 -->
@@ -80,28 +80,28 @@
     <template id="theme_fonts" inherit_id="web._assets_frontend_helpers">
         <xpath expr="//link[last()]" position="after">
             <link rel="stylesheet" type="text/scss"
-				href="/theme_clarico_vega/static/lib/theme/para_size.scss" />
+				href="/theme_clarico_vega/static/libs/theme/para_size.scss" />
             <link rel="stylesheet" type="text/scss"
-				href="/theme_clarico_vega/static/lib/theme/variables.scss" />
+				href="/theme_clarico_vega/static/libs/theme/variables.scss" />
             <link rel="stylesheet" type="text/scss"
-				href="/theme_clarico_vega/static/lib/theme/button.scss" />
+				href="/theme_clarico_vega/static/libs/theme/button.scss" />
             <link rel="stylesheet" type="text/scss"
-				href="/theme_clarico_vega/static/lib/theme/heading_size.scss" />
+				href="/theme_clarico_vega/static/libs/theme/heading_size.scss" />
             <link rel="stylesheet" type="text/scss"
-				href="/theme_clarico_vega/static/lib/theme/link_color.scss" />
+				href="/theme_clarico_vega/static/libs/theme/link_color.scss" />
         </xpath>
     </template>
     <!--================== Customize font Changes =======================-->
     <template id="theme_custom_fonts" inherit_id="website._assets_primary_variables">
         <xpath expr="//link" position="before">
             <link rel="stylesheet" type="text/scss"
-				href="/theme_clarico_vega/static/lib/theme/fonts.scss" />
+				href="/theme_clarico_vega/static/libs/theme/fonts.scss" />
         </xpath>
     </template>
     <template id="theme_clarico_inherit_layout" inherit_id="portal.frontend_layout">
         <xpath expr="//footer" position="after">
             <!-- AOS animations -->
-            <script src="/theme_clarico_vega/static/lib/aos/aos.js"></script>
+            <script src="/theme_clarico_vega/static/libs/aos/aos.js"></script>
             <script>
 				AOS.init({
 			  		easing: 'ease-out-back',
