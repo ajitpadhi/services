@@ -88,9 +88,9 @@
         <xpath expr="//table[@id='cart_products']/thead" position="replace">
             <thead>
                 <tr>
-                    <th class="border-top-0 td-img" width="80">Product</th>
-                    <th class="border-top-0"></th>
+                    <th colspan="2" class="border-top-0 text-center td-img">Product</th>
                     <th class="border-top-0 td-qty">Qty</th>
+                    <th class="border-top-0 text-left">Unit</th>
                     <th class="border-top-0 text-right td-price">Price</th>
                 </tr>
             </thead>
@@ -99,6 +99,11 @@
             <attribute name="class">table table-striped
 				te_confirm_products
 			</attribute>
+        </xpath>
+        <xpath expr="//table[@id='cart_products']//td[hasclass('td-price')]" position="before">
+        	<td class='td-price'>
+        		<span t-field="line.product_id.uom_id" style="white-space: nowrap;"/>
+        	</td>
         </xpath>
         <xpath expr="//table[@id='cart_products']//td[hasclass('td-price')]" position="attributes">
             <attribute name="class">text-right td-price
