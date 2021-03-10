@@ -1,0 +1,15 @@
+<odoo>
+
+    <template id="web_assets_frontend_ext" inherit_id="web.assets_frontend">
+        <xpath expr="." position="inside">
+            <!-- <script type="text/javascript" src="/website_sale_extension/static/js/hypothecation.js"/>
+            <link rel="stylesheet" type="text/scss" href="/website_sale_extension/static/css/style.css"/> -->
+        </xpath>
+    </template>
+    
+    <template id="address_b2b_inherit" inherit_id="website_sale.address_b2b" name="Show b2b fields" customize_show="True">
+        <xpath expr="//div[hasclass('w-100')]" position="replace">
+        </xpath>
+    </template>
+
+</odoo>

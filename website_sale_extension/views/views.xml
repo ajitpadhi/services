@@ -1,0 +1,44 @@
+<odoo>
+    <data>
+	    <menuitem id="menu_country_state_city_partner"
+	        action="base_address_city.action_res_city_tree"
+	        parent="contacts.menu_localisation"
+	        sequence="3"/>
+            
+	    <record id="view_order_form_extends" model="ir.ui.view">
+	        <field name="name">sale.order.form</field>
+	        <field name="model">sale.order</field>
+	        <field name="inherit_id" ref="sale.view_order_form"/>
+	        <field name="arch" type="xml">
+	            <xpath expr="//button[@name='action_confirm'][2]" position="after">
+	                <button name="action_sales_packed" states="sale" type="object" class="oe_highlight"
+	                        string="Packed"/>
+	                <button name="action_sales_arriving" states="packed" type="object" class="oe_highlight"
+	                        string="Arriving"/>
+	                <button name="action_sales_delivered" states="arriving" type="object" class="oe_highlight"
+	                        string="Delivered"/>	                        	                        
+	            </xpath>
+	            <xpath expr="//field[@name='payment_term_id']" position="after">
+	                <field name="receiver_id"/>
+	            </xpath>	
+	            <xpath expr="//field[@name='payment_term_id']" position="before">
+	            	<field name="date_packed" attrs="{'invisible': [('state', 'in', ['draft', 'sent','sale'])]}"/>
+	            	<field name="date_arrive" attrs="{'invisible': [('state', 'in', ['draft', 'sent','sale','packed'])]}"/>
+	            	<field name="date_deliver" attrs="{'invisible': [('state', 'in', ['draft', 'sent','sale','packed','arriving'])]}"/>
+	            </xpath>
+	           	<xpath expr="//page[@name='customer_signature']" position="replace">
+		           	<page groups="base.group_no_one" string="Customer Signature" name="customer_signature">
+	                    <group>
+			           		<field name="signed_on"/>
+			                <label for="digital_signature" string="Signature"/>
+		                    <h2>
+		                        <field name="digital_signature" widget="signature"/>
+		                    </h2>
+		               	</group>
+		        	</page>
+	            </xpath>	            
+	        </field>
+		</record>
+
+    </data>
+</odoo>
